@@ -4,6 +4,27 @@ import CardList from '../component/CardList/CardList'
 import SearchBox from '../component/SearchBox/SearchBox'
 import { robots } from '../robots';
 import HomePage from '../component/HomePage/HomePage';
+import LogIn from '../component/LogIn/LogIn'
+import Particles from 'react-particles-js';
+
+
+const Particlesoptions = {
+    particles: {
+     number:{
+         value:30,
+         density:{
+             enable:true,
+             value_area:800
+         },
+         	shadow: {
+                enable: true,
+                color: "#3CA9D1",
+                blur: 5
+            }
+     }
+    }
+}
+
 
 class App extends React.Component {
     constructor() {
@@ -11,7 +32,8 @@ class App extends React.Component {
         this.state = {
             searchField: "",
             robot: robots,
-            isSignedIn: true
+            isSignedIn: true,
+            isSignedOut: true
         }
     }
 
@@ -21,6 +43,9 @@ class App extends React.Component {
 
     isSignedIn = (event) => {
         this.setState({ isSignedIn: false })
+    }
+    isSignedOut = (event) => {
+        this.setState({ isSignedOut: false })
     }
 
     render() {
@@ -32,18 +57,21 @@ class App extends React.Component {
 
         return (
             <div className="App">
+                <Particles className='particles'
+                    params={Particlesoptions}
+
+                />
                 <h1>RoboFriends</h1>
                 {
                     this.state.isSignedIn ?
                         <HomePage isSignedIn={this.isSignedIn} /> : null
                 }
-
-                <SearchBox onSearchChange={this.onSearchChange} />
                 {
-                    !filteredrobots.length ?
-                        <h1>No Result Found</h1> : null
+                    this.state.isSignedOut ?
+                        <LogIn isSignedOut={this.isSignedOut} /> : null
                 }
 
+                <SearchBox onSearchChange={this.onSearchChange} />
                 <CardList robots={filteredrobots} />
             </div>
         );

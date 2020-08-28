@@ -10,6 +10,7 @@ const Homepage = (props) =>{
                 onClick={props.isSignedIn}> TAKE A PEEP
 
             </button>
+            
         </div>
     );
 }
