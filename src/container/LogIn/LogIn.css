@@ -1,0 +1,45 @@
+.login-form {
+  width: 100vw;
+   /* margin-top: 100px; */
+  /* height: 100vh; */
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 10;
+  background-color: black;
+  z-index: 1;
+   background: linear-gradient(89deg,#FF5EDF 0%,#04C8DE 100%); 
+   background: linear-gradient(to left, rgba(7, 27, 82, 1) 0%, rgba(0, 128, 128, 1) 100%); 
+  /* opacity: 0.8; */ 
+} 
+
+form{
+ position: relative;
+ margin: 500px;
+
+}
+form p{
+color: #fff;
+
+}
+
+.loginpage button {
+  margin-top: 20%;
+
+}
+.center{
+  display: flex;
+  justify-content:center;
+}
+.quth-content{
+  margin-right: 500px;
+  margin-left: 500px;
+}
+
+.login-form form {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  margin-top: 20%;
+}
+

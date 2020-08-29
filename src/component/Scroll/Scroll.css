@@ -1,0 +1,7 @@
+.Scroll{
+    border: 4px solid #FFBB11;
+    border-left: none;
+    border-right: none;
+    height:700px;
+    overflow: Scroll;
+}

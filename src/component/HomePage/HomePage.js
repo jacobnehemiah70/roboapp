@@ -7,7 +7,7 @@ const Homepage = (props) =>{
         <div className='homepage bg-lightest-blue'>
             <button className='pa3 ba b--green
              bg-white pointer dim'
-                onClick={props.isSignedIn}> TAKE A PEEP
+                onClick={props.isSignedIn}>Login
 
             </button>
             
